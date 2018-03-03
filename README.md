@@ -26,9 +26,8 @@ For reporting bugs or submitting suggestions, please open an issue [here](https:
 * x64 / x86 cross-platform
 * Internet connection for initial setup
 #### Libraries
-* [IP2Location Library](https://pypi.python.org/pypi/IP2Location/8.0.0)
-* tkinter (StdLib / preinstalled with python)
-* webbrowser (StdLib)
-* json (StdLib)
-* urllib (StdLib)
-* os (StdLib)
+* [IP2Location 8.0.0](https://pypi.python.org/pypi/IP2Location/8.0.0)
+
+```
+pip install IP2Location
+```
