@@ -12,4 +12,4 @@ iplookup is a python program for looking up geolocation data of an ip-adress. It
   * Area code / Zipcode
   * Timezone
  
-For reporting bugs or submitting suggestions, please open an issue [here](https://github.com/tobiasvonarx/iplookup/issues/new). For any questions, please check the [FAQ](https://github.com/tobiasvonarx/iplookup/master/FAQ.md)
+For reporting bugs or submitting suggestions, please open an issue [here](https://github.com/tobiasvonarx/iplookup/issues/new). For any questions, please check the [FAQ](https://github.com/tobiasvonarx/iplookup/blob/master/FAQ.md)
