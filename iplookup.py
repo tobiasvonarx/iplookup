@@ -4,16 +4,17 @@ from tkinter import *
 import tkinter.messagebox as msgbox
 import IP2Location as iplocation
 import webbrowser
-from platform import platform
 from json import load
 from urllib.request import urlopen
 from urllib.error import URLError
+from urllib.request import urlretrieve
+import os.path
 
 # Initialisation of Tkinter Window Settings
 root = Tk()
 root.title("iplookup")
 root.resizable(False, False)
-version = 0.4
+version = 0.5
 
 class location_data(Frame):
     def __init__(self, w, h, bg, bd, bc, ht):
@@ -127,7 +128,21 @@ This site or product includes IP2Location LITE data available from http://www.ip
     def check_version(self):
         msgbox.showinfo("Version Information", "You are currently running:\nv{v}".format(v=version))
 
+def get_data():
+    mypath = os.path.dirname(os.path.realpath(__file__))+'\\data'
+    if not os.path.isdir(mypath):
+        os.makedirs(mypath)
+    fname='data/data.BIN'
+    if not os.path.isfile(fname):
+        try:
+            msgbox.showinfo('Initial setup','Click OK to proceed with initial setup. Depending on your internet connection,\
+this may take a while. Do not close out of the main window while setup is still running.')
+            urlretrieve("https://www.dropbox.com/s/d4rqkgatz3z3uxc/data.BIN?dl=1", fname)
+            msgbox.showinfo('Initial setup','Setup completed')
+        except URLError:
+            msgbox.showerror('Error','Please connect to the internet and restart the application')
 def main():
+    get_data()
     app = Application()
     app.grid(row=1, column=1, sticky="w")
     app.location_data_frame.grid(row=2, column=1, sticky="w")
