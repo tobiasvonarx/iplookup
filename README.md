@@ -1,5 +1,5 @@
 # iplookup
-iplookup is a python program for looking up geolocation data of an ip-adress. It uses a Tkinter-based  GUI and iplookup's free DB11 database. iplookup version 0.4 supports the following functionality:
+iplookup is a python program for looking up geolocation data of an ip-adress. It uses a Tkinter-based  GUI and iplookup's lite DB11 database. iplookup version 0.4 supports the following functionality:
 * Lookup of IPv4 and IPv6
 * Lookup of client IP-Adress
 * Lookup includes:
