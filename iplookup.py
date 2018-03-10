@@ -132,7 +132,7 @@ def get_data():
     mypath = os.path.dirname(os.path.realpath(__file__))+'\\data'
     if not os.path.isdir(mypath):
         os.makedirs(mypath)
-    fname='data/data.BIN'
+    fname='data/weights.txt'
     if not os.path.isfile(fname):
         try:
             msgbox.showinfo('Initial setup','Click OK to proceed with initial setup. Depending on your internet connection,\
