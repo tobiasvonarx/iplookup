@@ -82,7 +82,7 @@ class Application(Frame):
     # Fetch geolocation of input ip-adress
     def fetch_data(self):
         location_obj = iplocation.IP2Location()
-        location_obj.open("data/data.BIN")
+        location_obj.open("data/data.bin")
         try:
             rec = location_obj.get_all(self.ip.get())
             self.location_data_frame.represent_data(rec)
@@ -132,7 +132,7 @@ def get_data():
     mypath = os.path.dirname(os.path.realpath(__file__))+'\\data'
     if not os.path.isdir(mypath):
         os.makedirs(mypath)
-    fname='data/weights.txt'
+    fname='data/data.bin'
     if not os.path.isfile(fname):
         try:
             msgbox.showinfo('Initial setup','Click OK to proceed with initial setup. Depending on your internet connection,\
